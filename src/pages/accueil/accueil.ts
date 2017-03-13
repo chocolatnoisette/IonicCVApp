@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+
+import { User } from '../../app/providers/global';
+
+import { NavController } from 'ionic-angular';
 
 /*
   Generated class for the Accueil page.
@@ -12,8 +15,12 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'accueil.html'
 })
 export class AccueilPage {
+  User: any = Object();
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  constructor(public navCtrl: NavController) {
+    this.User.name = User.name;
+    this.User.surname = User.surname;
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AccueilPage');
