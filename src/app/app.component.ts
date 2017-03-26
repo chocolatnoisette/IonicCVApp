@@ -1,10 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
-
-import { Page1 } from '../pages/page1/page1';
+import { AccueilPage } from '../pages/accueil/accueil';
 import { CompetencesPage } from '../pages/competences/competences';
-
 
 @Component({
   templateUrl: 'app.html'
@@ -12,7 +10,9 @@ import { CompetencesPage } from '../pages/competences/competences';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = Page1;
+  rootPage: any = AccueilPage;
+
+  User: any = Object();
 
   pages: Array<{title: string, component: any}>;
 
@@ -21,7 +21,7 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Page One', component: Page1 },
+      { title: 'Page One', component: AccueilPage },
       { title: 'Compétences', component: CompetencesPage }
     ];
 
@@ -29,6 +29,8 @@ export class MyApp {
 
   initializeApp() {
     this.platform.ready().then(() => {
+      this.User.name = "Martin";
+      this.User.surname = "Joss";
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       StatusBar.styleDefault();
