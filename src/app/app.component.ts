@@ -1,10 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
-
 import { AccueilPage } from '../pages/accueil/accueil';
-import { Page2 } from '../pages/page2/page2';
-
+import { CompetencesPage } from '../pages/competences/competences';
 
 @Component({
   templateUrl: 'app.html'
@@ -24,7 +22,7 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Page One', component: AccueilPage },
-      { title: 'Page Two', component: Page2 }
+      { title: 'Compétences', component: CompetencesPage }
     ];
 
   }
