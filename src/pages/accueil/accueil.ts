@@ -4,8 +4,6 @@ import { User } from '../../app/providers/global';
 
 import { NavController, IonicApp } from 'ionic-angular';
 
-import { a}
-
 /*
   Generated class for the Accueil page.
 
