@@ -3,7 +3,7 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 import { AccueilPage } from '../pages/accueil/accueil';
 import { CompetencesPage } from '../pages/competences/competences';
-import { Page1 } from '../pages/page1/page1';
+import { ParcoursPage } from '../pages/parcours/parcours';
 @Component({
   templateUrl: 'app.html'
 })
@@ -23,7 +23,7 @@ export class MyApp {
     this.pages = [
       { title: 'Accueil', component: AccueilPage },
       { title: 'Compétences', component: CompetencesPage },
-      { title: 'Parcours', component: Page1 }
+      { title: 'Parcours', component: ParcoursPage }
     ];
 
   }

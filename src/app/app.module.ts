@@ -3,12 +3,14 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { AccueilPage } from '../pages/accueil/accueil';
 import { CompetencesPage } from '../pages/competences/competences';
+import { ParcoursPage } from '../pages/parcours/parcours';
 
 @NgModule({
   declarations: [
     MyApp,
     AccueilPage,
-    CompetencesPage
+    CompetencesPage,
+    ParcoursPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -17,7 +19,8 @@ import { CompetencesPage } from '../pages/competences/competences';
   entryComponents: [
     MyApp,
     AccueilPage,
-    CompetencesPage
+    CompetencesPage,
+    ParcoursPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
